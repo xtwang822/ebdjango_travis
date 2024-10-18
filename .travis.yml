@@ -1,0 +1,32 @@
+language: python
+python:
+  - "3.8"  # Specify the Python version
+env:
+  global:
+    - DATABASE_URL="sqlite://:memory:"  # Using SQLite in memory for testing
+    - SECRET_KEY="your_secret_key"  # Add a fake secret key for testing
+
+# Install dependencies
+install:
+  - pip install -r requirements.txt  # Install required packages
+  - pip install black flake8 coverage coveralls  # Install additional tools
+
+# Run code quality checks and tests
+script:
+  - black --check .  # Run black to check formatting
+  - flake8  # Run flake8 for linting
+  - coverage run --source='.' manage.py test  # Run tests with coverage
+
+# Report code coverage to Coveralls
+after_success:
+  - coveralls
+
+# Deploy to AWS Elastic Beanstalk after successful build
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"  # Replace with your AWS region
+  app: "django-tutorial"  # Replace with your Elastic Beanstalk app name
+  env: "django-env"  # Replace with your EB environment name
+  bucket_name: "elasticbeanstalk-us-east-1-216989136265"  # Your EB S3 bucket for deployment
+  on:
+    branch: master  # Deploy only from master branch
