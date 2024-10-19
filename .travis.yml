@@ -26,6 +26,6 @@ deploy:
   env: django-env
   bucket_name: elasticbeanstalk-us-east-1-216989136265
   on:
-    repo: xtwang822/ebdjango
+    repo: xtwang822/ebdjango_travis
     branch: master
   skip_cleanup: 'true'
