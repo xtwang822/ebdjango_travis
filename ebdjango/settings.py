@@ -25,12 +25,10 @@ SECRET_KEY = 'z1yk=ofomn^!)%$zsb^z=&5^zg=@x6$hh(qcnamx2t+4@%9)+@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['django-env.eba-eefu9gv3.us-east-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['django-env.eba-hkbhnhm5.us-east-1.elasticbeanstalk.com']
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'django.contrib.admin',
