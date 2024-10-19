@@ -1,2 +1,2 @@
-![Build Status](https://travis-ci.org/yourusername/yourproject.svg?branch=master)
-[![Coverage Status](https://coveralls.io/repos/github/yourusername/yourproject/badge.svg?branch=master)](https://coveralls.io/github/yourusername/yourproject?branch=master)
+![Build Status](https://travis-ci.org/xtwang822/ebdjango_travis.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/xtwang822/ebdjango_travis/badge.svg?branch=master)](https://coveralls.io/github/xtwang822/ebdjango_travis?branch=master)
