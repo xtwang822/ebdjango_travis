@@ -1,0 +1,28 @@
+language: python
+python:
+  - "3.8"  # Specify the Python version
+
+install:
+  - pip install -r requirements.txt
+
+script:
+- black --check .
+- flake8 --max-line-length=150 .
+- coverage run manage.py test
+- env
+
+after_scripts:
+- coveralls
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-1
+  access_key_id: $AWS_ID
+  secret_access_key: $AWS_KEY
+  app: django-tutorial
+  env: django-env
+  bucket_name: elasticbeanstalk-us-east-1-216989136265
+  on:
+    repo: xtwang822/ebdjango
+    branch: master
+  skip_cleanup: 'true'

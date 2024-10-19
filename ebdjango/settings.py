@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['django-env.eba-hkbhnhm5.us-east-1.elasticbeanstalk.com']
 
-
 # Application definition
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',
