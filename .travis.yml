@@ -5,6 +5,7 @@ python:
 install:
   - pip install setuptools==59.6.0
   - pip install awsebcli
+  - pip install pytz
   - pip install -r requirements.txt
 
 before_script:
