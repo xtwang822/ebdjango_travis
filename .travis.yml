@@ -9,10 +9,9 @@ install:
 
 
 script:
-- black --check .
-- flake8 .
-- coverage run manage.py test
-- env
+  - black --check .
+  - flake8 .
+  - coverage run manage.py test
 
 after_scripts:
 - coveralls
