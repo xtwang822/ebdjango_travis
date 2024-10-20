@@ -19,9 +19,10 @@ after_scripts:
 deploy:
   provider: elasticbeanstalk
   region: us-east-1
-  app: django
+  app: ebdjango
   env: django-env
   bucket_name: elasticbeanstalk-us-east-1-216989136265
   on:
     branch: master
   skip_cleanup: 'true'
+
